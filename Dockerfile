@@ -1,5 +1,5 @@
-FROM ruby:2.6.0
-  
+FROM ruby:2.1.2
+
 ENV FF_VERSION=46.0
 ENV GOVERSION 1.9.3
 ENV GOROOT /opt/go
@@ -15,7 +15,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
                 libgtk-3-0 \
                 libasound2 \
                 wget \
-                --fix-missing xvfb && \
+                --fix-missing Xvfb && \
         rm -rf /var/lib/apt/lists/* && \
         wget "https://ftp.mozilla.org/pub/firefox/releases/${FF_VERSION}/linux-x86_64/en-US/firefox-${FF_VERSION}.tar.bz2" \
     -O /tmp/firefox.tar.bz2 && \
