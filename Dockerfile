@@ -1,4 +1,4 @@
-FROM ruby:2.1.2
+FROM ruby:2.6.3
 
 ENV GOVERSION 1.12
 ENV GOROOT /opt/go
